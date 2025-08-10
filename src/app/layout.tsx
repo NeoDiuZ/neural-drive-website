@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Open_Sans } from "next/font/google";
+import { Inter, Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,6 +12,13 @@ const inter = Inter({
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
@@ -61,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${openSans.variable} antialiased bg-[var(--color-secondary-cloudWhite)] text-[var(--color-supporting-softGray-darkText, #111827)]`}
+        className={`${inter.variable} ${openSans.variable} ${poppins.variable} antialiased bg-[var(--color-base-white)] text-[var(--text-color)]`}
       >
         {children}
 

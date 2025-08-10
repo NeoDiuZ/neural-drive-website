@@ -1,32 +1,34 @@
-import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
-import ProblemStatement from "@/components/ProblemStatement";
-import Solution from "@/components/Solution";
-import Demo from "@/components/Demo";
-import Team from "@/components/Team";
-import Urgency from "@/components/Urgency";
+import Navbar from "@/components/Navbar";
+import CursorGlow from "@/components/CursorGlow";
+import HeroCluely from "@/components/HeroCluely";
+import FeatureHighlights from "@/components/FeatureHighlights";
+import ProblemStats from "@/components/ProblemStats";
+import DemoSection from "@/components/DemoSection";
+import TeamGrid from "@/components/TeamGrid";
+import Partnerships from "@/components/Partnerships";
+import TrustMarquee from "@/components/TrustMarquee";
+import Manifesto from "@/components/Manifesto";
+import StickyCTA from "@/components/StickyCTA";
 import CTAForm from "@/components/CTAForm";
-import FAQ from "@/components/FAQ";
 import SiteFooter from "@/components/SiteFooter";
-import ExitIntentModal from "@/components/ExitIntentModal";
 
 export default function Home() {
   return (
     <>
-      <ExitIntentModal />
-      <main className="min-h-screen">
-        <Hero />
-        <TrustBar />
-        <ProblemStatement />
-        <Solution />
-        <Demo />
-        <Team />
-        <Urgency />
-        <CTAForm />
-        <FAQ />
-      </main>
+      <CursorGlow />
+      <Navbar />
+      <div className="pt-10" />
+      <HeroCluely />
+      <TrustMarquee />
+      <Manifesto />
+      <ProblemStats />
+      <FeatureHighlights />
+      <DemoSection />
+      <TeamGrid />
+      <Partnerships />
+      <CTAForm />
+      <StickyCTA />
       <SiteFooter />
     </>
   );
 }
-// test deploy
