@@ -7,9 +7,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
-  { title: "Double Blink Activation", desc: "2 rapid blinks. Haptic confirm.", icon: "👁️" },
-  { title: "EEG Focus Detection", desc: "Forehead sensor reads intent.", icon: "〰️" },
-  { title: "Instant Communication", desc: "Preset phrases. Critical needs.", icon: "💬" },
+  { 
+    title: "10-Second Setup", 
+    desc: "While others take 30+ minutes, Neural Drive activates in just 10 seconds through simple forehead placement.",
+    icon: "⚡",
+    gradient: "from-amber-500 to-orange-500"
+  },
+  { 
+    title: "Blink-to-Speak", 
+    desc: "Two deliberate blinks trigger immediate communication. No complex calibration required.",
+    icon: "👁️",
+    gradient: "from-blue-500 to-cyan-500"
+  },
+  { 
+    title: "Life-Critical Messages", 
+    desc: "Instant access to 'Call Nurse', 'I'm in Pain', 'I'm Hungry' and custom family messages.",
+    icon: "💬",
+    gradient: "from-emerald-500 to-teal-500"
+  },
 ];
 
 export default function FeatureHighlights() {
@@ -24,16 +39,48 @@ export default function FeatureHighlights() {
   }, []);
 
   return (
-    <section ref={rootRef} className="section-y">
+    <section ref={rootRef} className="section-y" id="features">
       <div className="container-w">
-        <div className="grid md:grid-cols-3 gap-4">
-          {features.map((f) => (
-            <div key={f.title} className="feat-card glass p-4">
-              <div className="text-2xl" aria-hidden>
-                <span className="inline-block animate-bounce [animation-duration:1.6s]">{f.icon}</span>
+        <div className="text-center mb-16">
+          <h2 className="h2 mb-4">Breakthrough Speed. Life-Saving Simplicity.</h2>
+          <p className="body-lg max-w-[50ch] mx-auto">
+            While traditional BCIs require extensive setup, Neural Drive gives voice back in seconds.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((f, index) => (
+            <div key={f.title} className="feat-card card group text-center">
+              <div className="mb-6">
+                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-r ${f.gradient} flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  {f.icon}
+                </div>
               </div>
-              <div className="mt-2 font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{f.title}</div>
-              <div className="mt-1 text-slate-600">{f.desc}</div>
+              
+              <h3 className="h3 mb-4">{f.title}</h3>
+              <p className="body text-left leading-relaxed">{f.desc}</p>
+              
+              {/* Subtle number indicator */}
+              <div className="absolute top-4 right-4 w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center text-xs font-semibold text-slate-600">
+                {index + 1}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Supporting stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { value: "10s", label: "Setup Time" },
+            { value: "2", label: "Blinks to Speak" },
+            { value: "15k+", label: "Patients in Need" },
+            { value: "24/7", label: "Always Ready" }
+          ].map((stat) => (
+            <div key={stat.label} className="space-y-2">
+              <div className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                {stat.value}
+              </div>
+              <div className="body-sm">{stat.label}</div>
             </div>
           ))}
         </div>

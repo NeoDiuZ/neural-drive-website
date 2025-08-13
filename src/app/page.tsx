@@ -6,11 +6,12 @@ import ProblemStats from "@/components/ProblemStats";
 import DemoSection from "@/components/DemoSection";
 import TeamGrid from "@/components/TeamGrid";
 import Partnerships from "@/components/Partnerships";
-import TrustMarquee from "@/components/TrustMarquee";
+
 import Manifesto from "@/components/Manifesto";
 import StickyCTA from "@/components/StickyCTA";
 import CTAForm from "@/components/CTAForm";
 import SiteFooter from "@/components/SiteFooter";
+import CompetitionWins from "@/components/CompetitionWins";
 
 export default function Home() {
   return (
@@ -19,12 +20,12 @@ export default function Home() {
       <Navbar />
       <div className="pt-10" />
       <HeroCluely />
-      <TrustMarquee />
       <Manifesto />
       <ProblemStats />
       <FeatureHighlights />
       <DemoSection />
       <TeamGrid />
+      <CompetitionWins />
       <Partnerships />
       <CTAForm />
       <StickyCTA />

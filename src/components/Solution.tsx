@@ -55,7 +55,7 @@ export default function Solution() {
               </tr>
             </thead>
             <tbody>
-              {rows.map(([label, ours, theirs], idx) => (
+              {rows.map(([label, ours, theirs]) => (
                 <tr key={label} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                   <td className="p-4 font-medium text-slate-700">{label}</td>
                   <td className="p-4 font-semibold text-slate-900">{ours}</td>
