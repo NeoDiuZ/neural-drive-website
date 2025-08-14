@@ -19,8 +19,8 @@ export default function CTAForm() {
       <div className="container-w">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="h2 mb-4">Join the Pilot Program</h2>
-            <p className="body-lg max-w-[45ch] mx-auto">
+            <h2 className="h2 mb-4 dark:text-white">Join the Pilot Program</h2>
+            <p className="body-lg max-w-[45ch] mx-auto dark:text-slate-300">
               Be among the first 50 families to experience life-changing communication technology.
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function CTAForm() {
             <form action={formAction} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Full Name *
                   </label>
                   <input 
@@ -41,7 +41,7 @@ export default function CTAForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Email Address *
                   </label>
                   <input 
@@ -57,7 +57,7 @@ export default function CTAForm() {
               
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Phone Number *
                   </label>
                   <input 
@@ -70,7 +70,7 @@ export default function CTAForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="role" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="role" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     I am a... *
                   </label>
                   <select id="role" className="input w-full" name="role" required>
@@ -106,7 +106,7 @@ export default function CTAForm() {
                     </>
                   )}
                 </button>
-                <p className="mt-4 text-center text-sm text-slate-500">
+                <p className="mt-4 text-center text-sm text-slate-500 dark:text-slate-400">
                   Your information is secure and will only be used to contact you about Neural Drive&apos;s pilot program.
                 </p>
               </div>

@@ -42,8 +42,8 @@ export default function FeatureHighlights() {
     <section ref={rootRef} className="section-y" id="features">
       <div className="container-w">
         <div className="text-center mb-16">
-          <h2 className="h2 mb-4">Breakthrough Speed. Life-Saving Simplicity.</h2>
-          <p className="body-lg max-w-[50ch] mx-auto">
+          <h2 className="h2 mb-4 dark:text-white">Breakthrough Speed. Life-Saving Simplicity.</h2>
+          <p className="body-lg max-w-[50ch] mx-auto dark:text-slate-300">
             While traditional BCIs require extensive setup, Neural Drive gives voice back in seconds.
           </p>
         </div>
@@ -57,11 +57,11 @@ export default function FeatureHighlights() {
                 </div>
               </div>
               
-              <h3 className="h3 mb-4">{f.title}</h3>
-              <p className="body text-left leading-relaxed">{f.desc}</p>
+              <h3 className="h3 mb-4 dark:text-white">{f.title}</h3>
+              <p className="body text-left leading-relaxed dark:text-slate-300">{f.desc}</p>
               
               {/* Subtle number indicator */}
-              <div className="absolute top-4 right-4 w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center text-xs font-semibold text-slate-600">
+              <div className="absolute top-4 right-4 w-6 h-6 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-xs font-semibold text-slate-600 dark:text-slate-300">
                 {index + 1}
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function FeatureHighlights() {
               <div className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                 {stat.value}
               </div>
-              <div className="body-sm">{stat.label}</div>
+              <div className="body-sm dark:text-slate-400">{stat.label}</div>
             </div>
           ))}
         </div>

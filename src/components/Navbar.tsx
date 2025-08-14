@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="container-w flex items-center justify-between">
         <Link 
           href="/" 
-          className="font-bold text-xl tracking-tight text-slate-900 hover:text-accent transition-colors" 
+          className="font-bold text-xl tracking-tight text-slate-900 dark:text-white hover:text-accent transition-colors" 
           aria-label="Neural Drive"
         >
           <div className="flex items-center gap-2">
@@ -41,7 +41,7 @@ export default function Navbar() {
             <a 
               key={item.label} 
               href={item.href} 
-              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors duration-200 relative group"
+              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200 relative group"
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 transition-all duration-200 group-hover:w-full"></span>
@@ -58,7 +58,7 @@ export default function Navbar() {
           </Link>
           
           {/* Mobile menu button */}
-          <button className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors">
+          <button className="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

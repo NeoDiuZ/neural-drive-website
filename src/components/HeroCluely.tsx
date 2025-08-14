@@ -60,13 +60,13 @@ export default function HeroCluely() {
                 🧠 Breakthrough Technology
               </span>
             </div>
-            <h1 className="h1 hero-title mb-6 text-slate-900">
+            <h1 className="h1 hero-title mb-6 text-slate-900 dark:text-white">
               Every second of silence isolates a life.
             </h1>
-            <p className="body-lg hero-sub mb-8 max-w-[50ch] text-slate-700">
+            <p className="body-lg hero-sub mb-8 max-w-[50ch] text-slate-700 dark:text-slate-200">
               Give Your Loved One Their Voice Back in Just 10 Seconds
             </p>
-            <p className="body mb-8 lg:mb-10 max-w-[55ch] leading-relaxed text-slate-600 mx-auto lg:mx-0">
+            <p className="body mb-8 lg:mb-10 max-w-[55ch] leading-relaxed text-slate-600 dark:text-slate-300 mx-auto lg:mx-0">
               Right now, 15,000+ Singaporeans are trapped in their own bodies, unable to say &quot;I love you&quot;, &quot;I&apos;m in pain&quot;, or simply &quot;thank you&quot;. Neural Drive is Singapore&apos;s breakthrough brain-computer interface that lets paralyzed patients communicate instantly through thought and blinks.
             </p>
             
@@ -94,7 +94,7 @@ export default function HeroCluely() {
               {["10-Second Setup", "HSA Class B", "15,000+ Patients", "Singapore-Made"].map((item, i) => (
                 <div key={item} className="flex items-center gap-2 hero-cta delay-300" style={{ animationDelay: `${0.6 + i * 0.1}s` }}>
                   <div className="w-2 h-2 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full"></div>
-                  <span className="body-sm font-medium text-slate-600">{item}</span>
+                  <span className="body-sm font-medium text-slate-600 dark:text-slate-400">{item}</span>
                 </div>
               ))}
             </div>

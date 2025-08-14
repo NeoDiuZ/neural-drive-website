@@ -17,8 +17,8 @@ export default function StickyCTA() {
       <div className="container-w">
         <div className="card px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 backdrop-blur-lg border border-white/20 shadow-strong">
           <div className="text-center sm:text-left">
-            <div className="text-sm font-semibold text-slate-900">Limited Pilot Program</div>
-            <div className="text-xs sm:text-sm text-slate-600">Accepting only 50 families for Q1 2026 launch</div>
+            <div className="text-sm font-semibold text-slate-900 dark:text-white">Limited Pilot Program</div>
+            <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Accepting only 50 families for Q1 2026 launch</div>
           </div>
           <Link href="#cta" className="btn btn-primary btn-sm sm:btn-md whitespace-nowrap w-full sm:w-auto">
             <span className="hidden sm:inline">Join Pilot Program</span>

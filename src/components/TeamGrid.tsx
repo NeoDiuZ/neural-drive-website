@@ -15,8 +15,8 @@ export default function TeamGrid() {
     <section className="section-y" id="team">
       <div className="container-w">
         <div className="text-center mb-16">
-          <h2 className="h2 mb-4">World-Class Expertise</h2>
-          <p className="body-lg max-w-[50ch] mx-auto">
+          <h2 className="h2 mb-4 dark:text-white">World-Class Expertise</h2>
+          <p className="body-lg max-w-[50ch] mx-auto dark:text-slate-300">
             Our team combines neuroscience, AI, and medical expertise to break barriers in assistive technology.
           </p>
         </div>
@@ -41,11 +41,11 @@ export default function TeamGrid() {
               </div>
               
               <div className="mb-4">
-                <h3 className="h3 text-lg mb-1">{m.name}</h3>
-                <div className="text-sm font-medium text-teal-600 mb-3">{m.role}</div>
+                <h3 className="h3 text-lg mb-1 dark:text-white">{m.name}</h3>
+                <div className="text-sm font-medium text-teal-600 dark:text-teal-400 mb-3">{m.role}</div>
               </div>
               
-              <p className="body-sm text-left leading-relaxed">{m.creds}</p>
+              <p className="body-sm text-left leading-relaxed dark:text-slate-300">{m.creds}</p>
             </article>
           ))}
         </div>
@@ -59,8 +59,8 @@ export default function TeamGrid() {
             { value: "15+", label: "Years Combined Experience" }
           ].map((stat) => (
             <div key={stat.label} className="space-y-2">
-              <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
-              <div className="body-sm text-slate-600">{stat.label}</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">{stat.value}</div>
+              <div className="body-sm text-slate-600 dark:text-slate-400">{stat.label}</div>
             </div>
           ))}
         </div>

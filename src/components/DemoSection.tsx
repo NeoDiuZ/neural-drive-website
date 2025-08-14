@@ -8,8 +8,8 @@ export default function DemoSection() {
     <section className="section-y" id="demo">
       <div className="container-w">
         <div className="text-center mb-12">
-          <h2 className="h2 mb-4">See the Moment Everything Changes</h2>
-          <p className="body-lg max-w-[50ch] mx-auto">
+          <h2 className="h2 mb-4 dark:text-white">See the Moment Everything Changes</h2>
+          <p className="body-lg max-w-[50ch] mx-auto dark:text-slate-300">
             Watch how Neural Drive gives voice back to those who need it most, in just seconds.
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function DemoSection() {
                 style={{ border: 'none' }}
               />
             </div>
-            <div className="mt-3 lg:mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-slate-600">
+            <div className="mt-3 lg:mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-slate-600 dark:text-slate-400">
               <div className="flex items-center gap-3 lg:gap-4">
                 <span className="flex items-center gap-2">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -45,7 +45,7 @@ export default function DemoSection() {
                 href="https://youtu.be/CLR19Y1oNJ4?feature=shared" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-teal-600 hover:text-teal-700 font-medium transition-colors text-center sm:text-right"
+                className="text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 font-medium transition-colors text-center sm:text-right"
               >
                 Watch on YouTube →
               </a>
@@ -61,10 +61,10 @@ export default function DemoSection() {
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                 </svg>
               </div>
-              <p className="body mb-4 italic">&quot;{t.text}&quot;</p>
+              <p className="body mb-4 italic dark:text-slate-300">&quot;{t.text}&quot;</p>
               <footer className="text-sm">
-                <div className="font-semibold text-slate-900">{t.author}</div>
-                <div className="text-slate-600">{t.relation}</div>
+                <div className="font-semibold text-slate-900 dark:text-white">{t.author}</div>
+                <div className="text-slate-600 dark:text-slate-400">{t.relation}</div>
                 {t.credential && (
                   <div className="mt-2 inline-flex items-center gap-1 text-emerald-600 text-xs">
                     <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
