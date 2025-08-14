@@ -114,10 +114,26 @@ html, body { background: var(--color-background); color: var(--color-foreground)
   background: white; 
   padding: 2rem;
   transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02), 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 .card:hover { 
   transform: translateY(-2px); 
   box-shadow: 0 8px 40px rgba(15, 23, 42, 0.08), 0 4px 16px rgba(15, 23, 42, 0.04); 
+  border-color: var(--color-accent);
+}
+
+/* Partner card specific styling */
+.partner-card {
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+}
+
+.partner-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
   border-color: var(--color-accent);
 }
 .shadow-soft { box-shadow: 0 4px 32px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02); }
@@ -250,6 +266,15 @@ html, body { background: var(--color-background); color: var(--color-foreground)
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 
+/* Utility scale classes */
+.group:hover .group-hover\:scale-102 {
+  transform: scale(1.02);
+}
+
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
 /* Hero Section Fallbacks */
 .hero-title, .hero-sub, .hero-cta, .hero-mock {
   opacity: 1 !important;
@@ -355,6 +380,29 @@ html, body { background: var(--color-background); color: var(--color-foreground)
   .section-y {
     padding-block: clamp(48px, 12vw, 80px);
   }
+  
+  /* Mobile-friendly animations */
+  .fade-up {
+    animation-duration: 0.4s;
+  }
+  
+  .card:hover {
+    transform: none; /* Disable hover lift on mobile */
+  }
+  
+  /* Reduce motion on mobile for better performance */
+  .group-hover\:scale-105:hover {
+    transform: scale(1.02);
+  }
+  
+  .group-hover\:scale-102:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Simpler transitions for mobile */
+  .transition-all {
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+  }
 }
 
 /* Comprehensive Dark Mode Support */
@@ -380,6 +428,16 @@ html, body { background: var(--color-background); color: var(--color-foreground)
     background: #1E293B !important;
     border-color: var(--color-dark-border) !important;
     color: var(--color-dark-text-primary) !important;
+  }
+  
+  .partner-card {
+    background: #1E293B !important;
+    border-color: var(--color-dark-border) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .partner-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2) !important;
   }
   
   .glass {

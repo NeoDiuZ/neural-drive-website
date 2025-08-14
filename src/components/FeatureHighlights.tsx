@@ -52,7 +52,7 @@ export default function FeatureHighlights() {
           {features.map((f, index) => (
             <div key={f.title} className="feat-card card group text-center">
               <div className="mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-r ${f.gradient} flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-r ${f.gradient} flex items-center justify-center text-2xl text-white shadow-lg group-hover:scale-105 transition-transform duration-200`}>
                   {f.icon}
                 </div>
               </div>

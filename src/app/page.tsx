@@ -18,7 +18,6 @@ export default function Home() {
     <>
       <CursorGlow />
       <Navbar />
-      <div className="pt-10" />
       <HeroCluely />
       <Manifesto />
       <ProblemStats />

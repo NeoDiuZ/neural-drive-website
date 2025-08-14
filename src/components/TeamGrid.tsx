@@ -29,7 +29,7 @@ export default function TeamGrid() {
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="mb-6">
-                <div className="relative w-20 h-20 mx-auto rounded-2xl overflow-hidden border-2 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div className="relative w-20 h-20 mx-auto rounded-2xl overflow-hidden border-2 border-white shadow-lg group-hover:scale-102 transition-transform duration-200">
                   <Image 
                     src={m.img} 
                     alt={`${m.name} — ${m.role}`} 

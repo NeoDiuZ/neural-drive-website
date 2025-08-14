@@ -50,13 +50,13 @@ export default function HeroCluely() {
   }, []);
 
   return (
-    <section className="section-y relative overflow-hidden hero-bg">
-      <div ref={rootRef} className="container-w">
+    <section className="relative overflow-hidden hero-bg pt-20 lg:pt-24">
+      <div ref={rootRef} className="container-w py-16 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[60vh] lg:min-h-[80vh]">
           {/* Left: Bold Headlines */}
           <div className="lg:pr-8 text-center lg:text-left">
             <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 hero-title">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-teal-50 to-cyan-50 dark:from-teal-900/30 dark:to-cyan-900/30 text-teal-700 dark:text-teal-300 border border-teal-200/50 dark:border-teal-700/50 hero-title">
                 🧠 Breakthrough Technology
               </span>
             </div>
