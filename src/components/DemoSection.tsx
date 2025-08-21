@@ -1,7 +1,7 @@
 export default function DemoSection() {
   const testimonials = [
     { text: "The first time my mother could tell us she loved us after her stroke... we all cried.", author: "Sarah Tan", relation: "Daughter of stroke patient", credential: false },
-    { text: "Setup was faster than putting on her reading glasses. Incredible technology.", author: "Dr. Michael Lim", relation: "Neurologist, SGH", credential: true },
+    { text: "Setup was faster than putting on her reading glasses. Incredible technology.", author: "Michael Lim", relation: "Father of stroke patient", credential: true },
   ];
 
   return (
