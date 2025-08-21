@@ -55,7 +55,7 @@ export default function TeamGrid() {
           {[
             { value: "7", label: "Expert Team Members" },
             { value: "100+", label: "Combined Tech Competitions" },
-            { value: "2", label: "Successful HealthTech Exits" },
+            { value: "1", label: "Successful HealthTech Exits" },
             { value: "15+", label: "Years Combined Experience" }
           ].map((stat) => (
             <div key={stat.label} className="space-y-2">
