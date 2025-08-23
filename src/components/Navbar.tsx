@@ -50,11 +50,9 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="#cta" className="btn btn-primary btn-sm hidden sm:flex">
-            Join Pilot Program
-          </Link>
-          <Link href="#cta" className="btn btn-primary btn-sm sm:hidden">
-            Join Pilot
+          <Link href="#cta" className="btn btn-primary btn-sm">
+            <span className="hidden sm:inline">Join Pilot Program</span>
+            <span className="sm:hidden">Join Pilot</span>
           </Link>
           
           {/* Mobile menu button */}

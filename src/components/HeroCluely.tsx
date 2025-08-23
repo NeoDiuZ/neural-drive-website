@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -106,18 +107,14 @@ export default function HeroCluely() {
               {/* Main device card */}
               <div className="glass p-8 lg:p-10 transform perspective-1000 hover:scale-[1.02] transition-transform duration-500">
                 <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-white/80 to-white/60 border border-white/60 shadow-inner overflow-hidden relative">
-                  {/* Mock device interface */}
-                  <div className="absolute inset-4 bg-slate-900 rounded-xl flex flex-col">
-                    <div className="flex-1 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg p-4 relative overflow-hidden">
-                      <div className="text-white/80 text-sm mb-2">Neural Drive Interface</div>
-                      <div className="space-y-2">
-                        <div className="h-2 bg-gradient-to-r from-teal-400 to-cyan-400 rounded w-3/4"></div>
-                        <div className="h-2 bg-white/20 rounded w-1/2"></div>
-                        <div className="h-2 bg-white/10 rounded w-2/3"></div>
-                      </div>
-                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
+                  {/* Neural Drive Interface Image */}
+                  <Image 
+                    src="/Interface.png" 
+                    alt="Neural Drive Interface" 
+                    fill
+                    className="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-cover rounded-xl"
+                    style={{ objectFit: 'cover' }}
+                  />
                   
                   {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 to-cyan-400/10 pointer-events-none"></div>

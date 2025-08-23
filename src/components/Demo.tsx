@@ -25,7 +25,7 @@ export default function Demo() {
       text: "Setup was faster than putting on her reading glasses. Incredible technology.",
       author: "Dr. Michael Lim",
       relation: "Neurologist, SGH",
-      credential: true,
+      credential: false,
     },
   ];
 

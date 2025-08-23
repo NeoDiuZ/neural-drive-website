@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ProblemStats() {
   const stats = [
     { number: "9,679", label: "Stroke cases yearly", color: "#FB923C" },
@@ -18,7 +20,15 @@ export default function ProblemStats() {
         </div>
         <div className="mt-4 glass p-4">
           <div className="grid md:grid-cols-[150px_1fr] items-center gap-4">
-            <div className="w-full h-28 rounded-xl bg-slate-200/70 border border-white/70 grid place-items-center text-slate-500 text-sm">blurred patient photo</div>
+            <div className="w-full h-28 rounded-xl bg-slate-200/70 border border-white/70 overflow-hidden relative">
+              <Image 
+                src="/patient_photo.png" 
+                alt="Patient using Neural Drive" 
+                fill
+                className="object-cover"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
             <div>
               <blockquote className="text-slate-700 italic">“Imagine being fully aware but unable to tell anyone you’re in pain...”</blockquote>
               <p className="mt-1 text-slate-600">This is reality for thousands of Singaporeans every day.</p>

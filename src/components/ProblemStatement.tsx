@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function ProblemStatement() {
   const ref = useRef<HTMLElement | null>(null);
@@ -33,8 +34,14 @@ export default function ProblemStatement() {
       </div>
       <div className="mt-10 rounded-2xl bg-[var(--color-supporting-warmGray)] p-6 sm:p-8 animate-fade-up" style={{ animationDelay: ".12s" as unknown as string }}>
         <div className="grid md:grid-cols-[160px_1fr] gap-6 items-center">
-          <div className="w-full h-36 rounded-lg bg-slate-300/40 flex items-center justify-center text-slate-600 text-sm">
-            blurred patient photo
+          <div className="w-full h-36 rounded-lg bg-slate-300/40 overflow-hidden relative">
+            <Image 
+              src="/patient_photo.png" 
+              alt="Patient using Neural Drive" 
+              fill
+              className="object-cover"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
           <div>
             <blockquote className="text-slate-700 italic">
