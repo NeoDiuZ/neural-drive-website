@@ -40,7 +40,7 @@ export default function ProblemStatement() {
               alt="Patient using Neural Drive" 
               fill
               className="object-cover"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
             />
           </div>
           <div>
