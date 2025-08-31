@@ -85,9 +85,9 @@ export default function Partnerships() {
         
         {/* Section Header */}
         <div className="partnerships-header text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6">
-            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            <span className="caption text-blue-700">Trusted by Leading Healthcare Institutions</span>
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-100 rounded-full mb-6">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="caption text-green-700">Trusted by Leading Healthcare Institutions</span>
           </div>
           
           <h2 className="heading-1 mb-6 max-w-[20ch] mx-auto">
@@ -109,17 +109,17 @@ export default function Partnerships() {
                 <div className="text-xs text-gray-500">Medical Device Pathway</div>
               </div>
             </div>
-            <div className="cert-badge inline-flex items-center gap-3 px-6 py-3 bg-blue-50 border border-blue-200 rounded-full">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <div>
-                <div className="font-semibold text-blue-700 text-sm">ISO 13485</div>
+                                <div className="cert-badge inline-flex items-center gap-3 px-6 py-3 bg-green-50 border border-green-200 rounded-full">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <div>
+                        <div className="font-semibold text-green-700 text-sm">ISO 13485</div>
                 <div className="text-xs text-gray-500">Quality Management</div>
               </div>
             </div>
-            <div className="cert-badge inline-flex items-center gap-3 px-6 py-3 bg-purple-50 border border-purple-200 rounded-full">
-              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-              <div>
-                <div className="font-semibold text-purple-700 text-sm">Procurement Ready</div>
+                                <div className="cert-badge inline-flex items-center gap-3 px-6 py-3 bg-green-50 border border-green-200 rounded-full">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <div>
+                        <div className="font-semibold text-green-700 text-sm">Procurement Ready</div>
                 <div className="text-xs text-gray-500">Institutional Deployment</div>
               </div>
             </div>
@@ -148,8 +148,8 @@ export default function Partnerships() {
         {/* Clinical Quote */}
         <div className="partnership-quote">
           <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center max-w-4xl mx-auto hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <div className="w-12 h-12 bg-green-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
               </svg>
             </div>

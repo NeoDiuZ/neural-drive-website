@@ -12,12 +12,12 @@
   --color-text-muted: #718096;
   --color-text-light: #A0AEC0;
   
-  /* Brand Colors - Healthcare Tech */
-  --color-accent: #0066CC;
-  --color-accent-light: #E6F3FF;
-  --color-accent-dark: #004C99;
-  --color-secondary: #00A651;
-  --color-secondary-light: #E6F7ED;
+  /* Brand Colors - Medical Green */
+  --color-accent: #22C55E;
+  --color-accent-light: #DCFCE7;
+  --color-accent-dark: #16A34A;
+  --color-secondary: #10B981;
+  --color-secondary-light: #D1FAE5;
   
   /* UI Colors */
   --color-border: #E2E8F0;

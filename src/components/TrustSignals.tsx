@@ -119,7 +119,7 @@ export default function TrustSignals() {
                 className="trust-item group"
               >
                 <div className="card-minimal text-center hover:shadow-md transition-all duration-300">
-                  <div className="text-blue-600 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-green-600 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
                     {cert.icon}
                   </div>
                   <div className="heading-4 text-sm mb-1">{cert.name}</div>

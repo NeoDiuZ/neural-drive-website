@@ -237,7 +237,7 @@ export default function TeamGrid() {
                 
                 <div className="mb-4">
                   <h3 className="heading-4 mb-1 text-gray-900">{mentor.name}</h3>
-                  <div className="body-small text-red-600 font-medium mb-3">{mentor.role}</div>
+                  <div className="body-small text-green-600 font-medium mb-3">{mentor.role}</div>
                 </div>
                 
                 <p className="body-small text-gray-600 text-left leading-relaxed">{mentor.creds}</p>

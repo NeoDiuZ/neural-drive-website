@@ -75,9 +75,9 @@ export default function HeroCluely() {
             
             {/* Badge */}
             <div className="hero-badge">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span className="caption text-blue-700">Medical Device Innovation</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-100 rounded-full">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span className="caption text-green-700">Medical Device Innovation</span>
               </div>
             </div>
 
@@ -85,7 +85,7 @@ export default function HeroCluely() {
             <div className="space-y-6">
               <h1 className="hero-title display-1 max-w-[12ch]">
                 Restoring voices in 
-                <span className="text-blue-600"> 10 seconds</span>
+                <span className="text-green-600"> 10 seconds</span>
               </h1>
               
               <p className="hero-subtitle subheading max-w-[50ch]">
@@ -112,15 +112,15 @@ export default function HeroCluely() {
             {/* Key metrics */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-100">
               <div>
-                <div className="heading-4 text-blue-600">10s</div>
+                <div className="heading-4 text-green-600">10s</div>
                 <div className="body-small text-gray-600">Setup time</div>
               </div>
               <div>
-                <div className="heading-4 text-blue-600">15k+</div>
+                <div className="heading-4 text-green-600">15k+</div>
                 <div className="body-small text-gray-600">Patients in need</div>
               </div>
               <div>
-                <div className="heading-4 text-blue-600">HSA</div>
+                <div className="heading-4 text-green-600">HSA</div>
                 <div className="body-small text-gray-600">Class B pathway</div>
               </div>
             </div>
@@ -131,13 +131,13 @@ export default function HeroCluely() {
             <div className="relative">
               
               {/* Main illustration container */}
-              <div ref={illustrationRef} className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 lg:p-12 border border-blue-100">
+              <div ref={illustrationRef} className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-12 border border-green-100">
                 
                 {/* Interface mockup */}
                 <div className="aspect-[4/3] bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative">
                   
                   {/* Header */}
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-4">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 px-6 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-3 h-3 bg-white/30 rounded-full"></div>
                       <div className="w-3 h-3 bg-white/30 rounded-full"></div>
@@ -149,8 +149,8 @@ export default function HeroCluely() {
                   {/* Content area */}
                   <div className="p-6 space-y-4">
                     <div className="text-center space-y-2">
-                      <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto flex items-center justify-center">
-                        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-16 h-16 bg-green-100 rounded-2xl mx-auto flex items-center justify-center">
+                        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10m0 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2m10 0v10a2 2 0 01-2 2H9a2 2 0 01-2-2V8m8 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2" />
                         </svg>
                       </div>
@@ -159,7 +159,7 @@ export default function HeroCluely() {
                     
                     {/* Message options */}
                     <div className="grid grid-cols-2 gap-3">
-                      <button className="p-3 bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 text-xs font-medium text-blue-700 transition-colors">
+                      <button className="p-3 bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 text-xs font-medium text-green-700 transition-colors">
                         Call Nurse
                       </button>
                       <button className="p-3 bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 text-xs font-medium text-green-700 transition-colors">
@@ -176,7 +176,7 @@ export default function HeroCluely() {
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </div>
                 

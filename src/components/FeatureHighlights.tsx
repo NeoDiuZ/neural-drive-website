@@ -32,8 +32,8 @@ const features = [
       <div className="relative w-full h-48 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl flex items-center justify-center">
         <div className="space-y-4">
           <div className="flex justify-center space-x-2">
-            <div className="w-8 h-8 bg-green-600 rounded-full animate-pulse"></div>
-            <div className="w-8 h-8 bg-green-600 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            <div className="w-8 h-8 bg-green-500 rounded-full animate-pulse"></div>
+            <div className="w-8 h-8 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
           </div>
           <div className="bg-white px-4 py-2 rounded-lg shadow-sm border">
             <span className="text-sm font-medium text-gray-900">&ldquo;Call Nurse&rdquo;</span>

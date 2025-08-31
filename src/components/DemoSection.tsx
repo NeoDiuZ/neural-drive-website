@@ -139,7 +139,7 @@ export default function DemoSection() {
                     href="https://youtu.be/CLR19Y1oNJ4?feature=shared" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn btn-outline hover:bg-blue-50"
+                    className="btn btn-outline hover:bg-green-50"
                   >
                     Watch on YouTube
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
