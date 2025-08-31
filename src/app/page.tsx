@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroCluely from "@/components/HeroCluely";
 import TrustSignals from "@/components/TrustSignals";
@@ -9,6 +12,16 @@ import CTAForm from "@/components/CTAForm";
 import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
+  useEffect(() => {
+    // Ensure page always loads at the top
+    window.scrollTo(0, 0);
+    
+    // Remove any hash from URL that might cause scrolling
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+    }
+  }, []);
+
   return (
     <>
       <Navbar />

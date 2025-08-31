@@ -92,11 +92,11 @@ export default function Navbar() {
       {/* Floating Navigation */}
       <header 
         ref={navRef}
-        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out ${
+        className={`fixed z-50 transition-all duration-500 ease-out ${
           scrolled 
-            ? "w-[95%] max-w-6xl scale-95" 
-            : "w-[90%] max-w-5xl scale-100"
-        }`}
+            ? "top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl scale-95" 
+            : "top-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-5xl scale-100"
+        } sm:top-6 sm:left-1/2 sm:transform sm:-translate-x-1/2`}
       >
         {/* Dynamic gradient background following mouse */}
         <div 
@@ -122,7 +122,7 @@ export default function Navbar() {
             }}
           />
           
-          <div className="relative z-10 px-8 py-4 flex items-center justify-between">
+          <div className="relative z-10 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between">
             {/* Enhanced Logo with 3D effects */}
             <Link 
               href="/" 
@@ -131,10 +131,10 @@ export default function Navbar() {
             >
               <div 
                 ref={logoRef}
-                className="relative w-12 h-12 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform-gpu perspective-1000"
+                className="relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform-gpu perspective-1000"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <span className="text-white font-black text-lg relative z-10">N</span>
+                <span className="text-white font-black text-base sm:text-lg relative z-10">N</span>
                 
                 {/* Animated gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" />
@@ -150,21 +150,21 @@ export default function Navbar() {
                 {/* 3D depth shadow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl transform translate-x-0.5 translate-y-0.5 -z-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300" />
               </div>
-              <span className="hidden lg:block group-hover:text-green-600 transition-colors font-semibold">
+              <span className="hidden sm:block lg:block group-hover:text-green-600 transition-colors font-semibold text-lg sm:text-xl">
                 Neural Drive
               </span>
             </Link>
             
             {/* Desktop Navigation with morphing indicators */}
             <div className="hidden lg:flex items-center">
-              <nav className="flex items-center gap-1 mr-8 relative">
+              <nav className="flex items-center gap-1 mr-4 sm:mr-8 relative">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.href.slice(1);
                   return (
                     <a 
                       key={item.label} 
                       href={item.href} 
-                      className={`group relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                      className={`group relative px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 ${
                         isActive
                           ? "text-green-600 bg-green-50/80 shadow-lg shadow-green-500/20"
                           : "text-gray-600 hover:text-gray-900 hover:bg-white/50"
@@ -200,12 +200,12 @@ export default function Navbar() {
               {/* Enhanced CTA Button with glass morphism */}
               <Link 
                 href="#cta" 
-                className="group relative px-8 py-3 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                className="group relative px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 text-white font-semibold rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
                   <span className="hidden sm:inline">Join Pilot Program</span>
                   <span className="sm:hidden">Join Pilot</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
@@ -221,9 +221,9 @@ export default function Navbar() {
             {/* Mobile menu button with morphing animation */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-3 text-gray-600 hover:text-gray-900 transition-colors relative group"
+              className="lg:hidden p-2 sm:p-3 text-gray-600 hover:text-gray-900 transition-colors relative group"
             >
-              <div className="w-6 h-6 relative">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 relative">
                 <span className={`absolute left-0 top-1 w-6 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
                 <span className={`absolute left-0 top-3 w-6 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`} />
                 <span className={`absolute left-0 top-5 w-6 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
@@ -244,31 +244,31 @@ export default function Navbar() {
       }`}>
         <div className="absolute inset-0 bg-gray-900/30 backdrop-blur-lg" onClick={() => setIsMenuOpen(false)} />
         
-        <div className={`absolute top-24 left-1/2 transform -translate-x-1/2 w-[90%] max-w-md transition-all duration-500 ${
+        <div className={`absolute top-16 sm:top-24 left-1/2 transform -translate-x-1/2 w-[95%] sm:w-[90%] max-w-sm sm:max-w-md transition-all duration-500 ${
           isMenuOpen ? "scale-100 opacity-100 translate-y-0" : "scale-95 opacity-0 -translate-y-4"
         }`}>
-          <nav className="bg-white/90 backdrop-blur-2xl rounded-3xl border border-white/30 shadow-2xl p-8">
-            <div className="space-y-6">
+          <nav className="bg-white/90 backdrop-blur-2xl rounded-2xl sm:rounded-3xl border border-white/30 shadow-2xl p-6 sm:p-8">
+            <div className="space-y-4 sm:space-y-6">
               {navItems.map((item, index) => (
                 <a 
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-4 p-4 rounded-2xl text-gray-700 hover:text-green-600 hover:bg-green-50/50 transition-all duration-300 group"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl text-gray-700 hover:text-green-600 hover:bg-green-50/50 transition-all duration-300 group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <span className="font-medium">{item.label}</span>
+                  <span className="font-medium text-sm sm:text-base">{item.label}</span>
                   <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
               ))}
               
-              <div className="pt-6 border-t border-gray-200/50">
+              <div className="pt-4 sm:pt-6 border-t border-gray-200/50">
                 <Link 
                   href="#cta"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="flex items-center justify-center gap-2 w-full p-3 sm:p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group text-sm sm:text-base"
                 >
                   Join Pilot Program
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -54,7 +54,7 @@ export default function HeroCluely() {
   }, []);
 
   return (
-    <section ref={rootRef} className="section bg-white relative overflow-hidden">
+    <section ref={rootRef} className="section bg-white relative overflow-hidden pt-20 sm:pt-24 lg:pt-8">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <svg width="60" height="60" viewBox="0 0 60 60" className="absolute inset-0 w-full h-full">
@@ -67,11 +67,11 @@ export default function HeroCluely() {
         </svg>
       </div>
 
-      <div className="container container-xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-[90vh] lg:min-h-[80vh]">
+      <div className="container container-xl relative z-10 px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center min-h-[85vh] sm:min-h-[90vh] lg:min-h-[80vh]">
           
           {/* Content */}
-          <div className="space-y-8 lg:space-y-10">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10 text-center lg:text-left">
             
             {/* Badge */}
             <div className="hero-badge">
@@ -83,25 +83,25 @@ export default function HeroCluely() {
 
             {/* Headline */}
             <div className="space-y-6">
-              <h1 className="hero-title display-1 max-w-[12ch]">
+              <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-[12ch] mx-auto lg:mx-0">
                 Restoring voices in 
                 <span className="text-green-600"> 10 seconds</span>
               </h1>
               
-              <p className="hero-subtitle subheading max-w-[50ch]">
+              <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-[50ch] mx-auto lg:mx-0">
                 Neural Drive enables paralyzed patients to communicate instantly through breakthrough brain-computer interface technology.
               </p>
             </div>
 
             {/* CTA */}
-            <div className="hero-cta flex flex-col sm:flex-row gap-4">
-              <Link href="#pilot" className="btn btn-primary">
+            <div className="hero-cta flex flex-col sm:flex-row gap-3 sm:gap-4 items-center lg:items-start">
+              <Link href="#pilot" className="btn btn-primary w-full sm:w-auto text-center">
                 Join Pilot Program
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link href="#demo" className="btn btn-secondary">
+              <Link href="#demo" className="btn btn-secondary w-full sm:w-auto text-center">
                 Watch Demo
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8" />
@@ -110,16 +110,16 @@ export default function HeroCluely() {
             </div>
 
             {/* Key metrics */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-100">
-              <div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-gray-100">
+              <div className="text-center lg:text-left">
                 <div className="heading-4 text-green-600">10s</div>
                 <div className="body-small text-gray-600">Setup time</div>
               </div>
-              <div>
+              <div className="text-center lg:text-left">
                 <div className="heading-4 text-green-600">15k+</div>
                 <div className="body-small text-gray-600">Patients in need</div>
               </div>
-              <div>
+              <div className="text-center lg:text-left">
                 <div className="heading-4 text-green-600">HSA</div>
                 <div className="body-small text-gray-600">Class B pathway</div>
               </div>
@@ -127,11 +127,11 @@ export default function HeroCluely() {
           </div>
 
           {/* Visual */}
-          <div className="hero-visual relative">
+          <div className="hero-visual relative mt-8 lg:mt-0">
             <div className="relative">
               
               {/* Main illustration container */}
-              <div ref={illustrationRef} className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-12 border border-green-100">
+              <div ref={illustrationRef} className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border border-green-100">
                 
                 {/* Interface mockup */}
                 <div className="aspect-[4/3] bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative">

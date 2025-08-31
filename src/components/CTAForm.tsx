@@ -49,7 +49,7 @@ export default function CTAForm() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="cta" className="section bg-white" aria-label="Call to action">
+    <section ref={sectionRef} id="cta" className="section bg-white px-4 sm:px-6 lg:px-8" aria-label="Call to action">
       <div className="container container-xl">
         <div className="max-w-4xl mx-auto">
           
