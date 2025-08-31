@@ -62,9 +62,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (logoRef.current) {
+    const logoElement = logoRef.current;
+    if (logoElement) {
       const handleLogoHover = () => {
-        gsap.to(logoRef.current, {
+        gsap.to(logoElement, {
           rotationY: 360,
           duration: 0.8,
           ease: "power2.out"
@@ -81,8 +82,8 @@ export default function Navbar() {
         });
       };
       
-      logoRef.current?.addEventListener('mouseenter', handleLogoHover);
-      return () => logoRef.current?.removeEventListener('mouseenter', handleLogoHover);
+      logoElement.addEventListener('mouseenter', handleLogoHover);
+      return () => logoElement.removeEventListener('mouseenter', handleLogoHover);
     }
   }, []);
 
@@ -157,7 +158,7 @@ export default function Navbar() {
             {/* Desktop Navigation with morphing indicators */}
             <div className="hidden lg:flex items-center">
               <nav className="flex items-center gap-1 mr-8 relative">
-                {navItems.map((item, index) => {
+                {navItems.map((item) => {
                   const isActive = activeSection === item.href.slice(1);
                   return (
                     <a 

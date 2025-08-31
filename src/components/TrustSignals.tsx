@@ -88,7 +88,7 @@ export default function TrustSignals() {
           <div className="caption text-gray-500 mb-4">Trusted by Leading Healthcare Institutions</div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {partners.map((partner, index) => (
+            {partners.map((partner) => (
               <div 
                 key={partner.name}
                 className="trust-item flex items-center justify-center"
@@ -113,7 +113,7 @@ export default function TrustSignals() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {certifications.map((cert, index) => (
+            {certifications.map((cert) => (
               <div 
                 key={cert.name}
                 className="trust-item group"

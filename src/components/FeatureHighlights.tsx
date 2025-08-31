@@ -36,7 +36,7 @@ const features = [
             <div className="w-8 h-8 bg-green-600 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
           </div>
           <div className="bg-white px-4 py-2 rounded-lg shadow-sm border">
-            <span className="text-sm font-medium text-gray-900">"Call Nurse"</span>
+            <span className="text-sm font-medium text-gray-900">&ldquo;Call Nurse&rdquo;</span>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ const features = [
             <span className="text-xs font-medium text-gray-700">Call Nurse</span>
           </div>
           <div className="bg-white rounded-lg shadow-sm border p-3 flex items-center justify-center">
-            <span className="text-xs font-medium text-gray-700">I'm Hungry</span>
+            <span className="text-xs font-medium text-gray-700">I&apos;m Hungry</span>
           </div>
           <div className="bg-white rounded-lg shadow-sm border p-3 flex items-center justify-center">
             <span className="text-xs font-medium text-gray-700">Thank You</span>

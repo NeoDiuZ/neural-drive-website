@@ -12,7 +12,7 @@ export default function SiteFooter() {
               <span className="font-semibold text-xl text-gray-900">Neural Drive</span>
             </div>
             <p className="body-small text-gray-600 mb-6 leading-relaxed max-w-[30ch]">
-              Singapore's breakthrough brain-computer interface giving voice to the paralyzed in just 10 seconds.
+              Singapore&apos;s breakthrough brain-computer interface giving voice to the paralyzed in just 10 seconds.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-50 border border-green-200 rounded-full">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>

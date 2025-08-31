@@ -163,7 +163,7 @@ export default function CTAForm() {
                   </button>
                   
                   <p className="mt-6 text-center body-small text-gray-500">
-                    Your information is secure and will only be used to contact you about Neural Drive's pilot program.
+                    Your information is secure and will only be used to contact you about Neural Drive&apos;s pilot program.
                   </p>
                 </div>
               </form>

@@ -136,7 +136,7 @@ export default function TeamGrid() {
         {/* Leadership Team */}
         <div className="mb-16">
           <div className="grid lg:grid-cols-3 gap-8">
-            {leadership.map((member, index) => (
+            {leadership.map((member) => (
               <div key={member.name} className="team-card">
                 <div className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-gray-300 transition-all duration-300">
                   <div className="mb-6">
@@ -166,7 +166,7 @@ export default function TeamGrid() {
         {/* Core Team */}
         <div className="mb-16">
           <div className="grid lg:grid-cols-2 gap-8">
-            {coreTeam.slice(0, 2).map((member, index) => (
+            {coreTeam.slice(0, 2).map((member) => (
               <div key={member.name} className="team-card">
                 <div className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-gray-300 transition-all duration-300">
                   <div className="mb-6">

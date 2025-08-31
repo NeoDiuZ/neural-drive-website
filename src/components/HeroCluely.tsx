@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -163,7 +163,7 @@ export default function HeroCluely() {
                         Call Nurse
                       </button>
                       <button className="p-3 bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 text-xs font-medium text-green-700 transition-colors">
-                        I'm Hungry
+                        I&apos;m Hungry
                       </button>
                       <button className="p-3 bg-purple-50 hover:bg-purple-100 rounded-lg border border-purple-200 text-xs font-medium text-purple-700 transition-colors">
                         Thank You

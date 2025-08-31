@@ -163,9 +163,9 @@ export default function DemoSection() {
                   </svg>
                 </div>
                 
-                <p className="body-large mb-6 italic text-gray-700">
-                  "{testimonial.text}"
-                </p>
+                              <p className="body-large mb-6 italic text-gray-700">
+                &ldquo;{testimonial.text}&rdquo;
+              </p>
                 
                 <footer className="space-y-1">
                   <div className="heading-4 text-sm text-gray-900">{testimonial.author}</div>

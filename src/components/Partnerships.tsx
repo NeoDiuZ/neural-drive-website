@@ -14,23 +14,7 @@ const partners = [
   { name: "Lions Befrienders", img: "/lionbefrienders.png" },
 ];
 
-const certifications = [
-  {
-    name: "HSA Class B",
-    description: "Medical Device Pathway",
-    color: "green"
-  },
-  {
-    name: "ISO 13485",
-    description: "Quality Management",
-    color: "blue"
-  },
-  {
-    name: "Procurement Ready",
-    description: "Institutional Deployment",
-    color: "purple"
-  }
-];
+// Removed unused certifications array
 
 export default function Partnerships() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -145,7 +129,7 @@ export default function Partnerships() {
         {/* Partner Logos */}
         <div className="mb-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {partners.map((partner, index) => (
+                                {partners.map((partner) => (
               <div key={partner.name} className="partner-card group">
                 <div className="bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 rounded-xl p-6 h-24 flex items-center justify-center transition-all duration-300 hover:shadow-md">
                   <Image 
@@ -170,10 +154,10 @@ export default function Partnerships() {
               </svg>
             </div>
             
-            <blockquote className="body-large mb-6 italic text-gray-700 max-w-[60ch] mx-auto">
-              "Neural Drive represents the cutting edge of assistive communication technology, 
-              meeting our strict standards for patient safety and clinical efficacy."
-            </blockquote>
+                                <blockquote className="body-large mb-6 italic text-gray-700 max-w-[60ch] mx-auto">
+                      &ldquo;Neural Drive represents the cutting edge of assistive communication technology, 
+                      meeting our strict standards for patient safety and clinical efficacy.&rdquo;
+                    </blockquote>
             
             <footer className="space-y-1">
               <div className="heading-4 text-sm text-gray-900">Clinical Advisory Board</div>
