@@ -8,7 +8,7 @@ const navItems = [
   { label: "How It Works", href: "#features" },
   { label: "Clinical", href: "#demo" },
   { label: "Team", href: "#team" },
-  { label: "Partners", href: "#partnerships" }
+  // { label: "Partners", href: "#partnerships" }
 ];
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
       setScrolled(scrollY > 50);
       
       // Detect active section
-      const sections = ['features', 'demo', 'team', 'partnerships'];
+      const sections = ['features', 'demo', 'team'];
       let current = '';
       for (const section of sections) {
         const element = document.getElementById(section);
