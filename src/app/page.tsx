@@ -3,11 +3,11 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroCluely from "@/components/HeroCluely";
-import TrustSignals from "@/components/TrustSignals";
+// import TrustSignals from "@/components/TrustSignals";
 import FeatureHighlights from "@/components/FeatureHighlights";
 import DemoSection from "@/components/DemoSection";
 import TeamGrid from "@/components/TeamGrid";
-import Partnerships from "@/components/Partnerships";
+// import Partnerships from "@/components/Partnerships";
 import CTAForm from "@/components/CTAForm";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -26,11 +26,11 @@ export default function Home() {
     <>
       <Navbar />
       <HeroCluely />
-      <TrustSignals />
+      {/* <TrustSignals /> */}
       <FeatureHighlights />
       <DemoSection />
       <TeamGrid />
-      <Partnerships />
+      {/* <Partnerships /> */}
       <CTAForm />
       <SiteFooter />
     </>

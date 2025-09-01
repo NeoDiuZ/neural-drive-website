@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,16 +12,16 @@ const features = [
     title: "10-Second Setup", 
     desc: "While traditional BCIs take 30+ minutes to calibrate, Neural Drive activates instantly through simple forehead placement.",
     illustration: (
-      <div className="relative w-full h-48 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center">
-        <div className="relative">
-          <div className="w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center">
-            <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-            <span className="text-white text-xs font-bold">✓</span>
-          </div>
+      <div className="relative w-full h-48 rounded-2xl overflow-hidden">
+        <Image 
+          src="/Interface.png" 
+          alt="Neural Drive 10-Second Setup Interface"
+          width={400}
+          height={300}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+          <span className="text-white text-xs font-bold">✓</span>
         </div>
       </div>
     )
@@ -110,9 +111,9 @@ export default function FeatureHighlights() {
         
         {/* Section Header */}
         <div className="features-header text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6">
-            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            <span className="caption text-blue-700">How It Works</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-100 rounded-full mb-6">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span className="caption text-green-700">How It Works</span>
           </div>
           
           <h2 className="heading-1 mb-6 max-w-[20ch] mx-auto">
@@ -136,8 +137,8 @@ export default function FeatureHighlights() {
             >
               {/* Content */}
               <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-2xl">
-                  <span className="heading-4 text-blue-600">{index + 1}</span>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-2xl">
+                  <span className="heading-4 text-green-600">{index + 1}</span>
                 </div>
                 
                 <h3 className="heading-2">{feature.title}</h3>
@@ -147,7 +148,7 @@ export default function FeatureHighlights() {
                 </p>
                 
                 <div className="pt-4">
-                  <div className="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all duration-200 cursor-pointer group">
+                  <div className="inline-flex items-center gap-2 text-green-600 font-medium hover:gap-3 transition-all duration-200 cursor-pointer group">
                     <span>Learn more</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -172,11 +173,11 @@ export default function FeatureHighlights() {
             {[
               { value: "10", unit: "s", label: "Setup time" },
               { value: "2", unit: "", label: "Blinks needed" },
-              { value: "15", unit: "k+", label: "Patients in need" },
+              { value: "600", unit: "M+", label: "Patients across Singapore and ASEAN countries" },
               { value: "100", unit: "%", label: "Success rate" }
             ].map((stat) => (
               <div key={stat.label} className="space-y-2">
-                <div className="heading-1 text-blue-600">
+                <div className="heading-1 text-green-600">
                   {stat.value}<span className="text-gray-400">{stat.unit}</span>
                 </div>
                 <div className="body-small text-gray-500">{stat.label}</div>
