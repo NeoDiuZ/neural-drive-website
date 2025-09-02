@@ -136,7 +136,7 @@ export default function Navbar() {
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 <Image
-                  src="/neuraldriveLogo.jpeg"
+                  src="/neuraldriveLogo.png"
                   alt="Neural Drive Logo"
                   width={48}
                   height={48}

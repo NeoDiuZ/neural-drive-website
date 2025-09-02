@@ -10,7 +10,7 @@ export default function SiteFooter() {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 rounded-lg overflow-hidden">
                 <Image
-                  src="/neuraldriveLogo.jpeg"
+                  src="/neuraldriveLogo.png"
                   alt="Neural Drive Logo"
                   width={32}
                   height={32}
