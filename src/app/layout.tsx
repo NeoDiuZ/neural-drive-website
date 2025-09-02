@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     "ALS",
   ],
   metadataBase: new URL("https://neuraldrive.sg"),
+  icons: {
+    icon: "/neuraldriveLogo.jpeg",
+    shortcut: "/neuraldriveLogo.jpeg",
+    apple: "/neuraldriveLogo.jpeg",
+  },
   openGraph: {
     title:
       "Neural Drive | Give Voice to the Voiceless - Singapore's First Brain-Computer Communication Platform",
@@ -46,6 +51,7 @@ export const metadata: Metadata = {
       "Revolutionary EEG/EOG assistive device helping paralyzed patients communicate in 10 seconds. 10x cheaper than alternatives. HSA-approved pathway.",
     type: "website",
     url: "https://neuraldrive.sg/",
+    images: ["/neuraldriveLogo.jpeg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -53,6 +59,7 @@ export const metadata: Metadata = {
       "Neural Drive | Give Voice to the Voiceless - Singapore's First Brain-Computer Communication Platform",
     description:
       "Revolutionary EEG/EOG assistive device helping paralyzed patients communicate in 10 seconds. 10x cheaper than alternatives. HSA-approved pathway.",
+    images: ["/neuraldriveLogo.jpeg"],
   },
 };
 

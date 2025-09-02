@@ -26,10 +26,13 @@ export async function submitLead(formData: FormData) {
   if (!emailOk) return { ok: false, error: "Please enter a valid email address." } as const;
 
   // Validate role
-  const validRoles = ["Patient", "Family Member", "Healthcare Provider", "Investor"];
-  if (!validRoles.includes(role)) {
+  const validRoles: LeadPayload["role"][] = ["Patient", "Family Member", "Healthcare Provider", "Investor"];
+  if (!validRoles.includes(role as LeadPayload["role"])) {
     return { ok: false, error: "Please select a valid role." } as const;
   }
+
+  // Type assertion after validation
+  const validatedRole = role as LeadPayload["role"];
 
   try {
     // Send email notification to mo@neuraldrive.tech
@@ -37,7 +40,7 @@ export async function submitLead(formData: FormData) {
       from: process.env.FROM_EMAIL || 'Neural Drive <onboarding@resend.dev>',
       to: [process.env.TO_EMAIL || 'mo@neuraldrive.tech'],
       subject: `New Pilot Program Application - ${name}`,
-      html: createEmailTemplate({ name, email, phone, role }),
+      html: createEmailTemplate({ name, email, phone, role: validatedRole }),
     });
 
     if (error) {

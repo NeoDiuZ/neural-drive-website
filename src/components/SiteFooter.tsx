@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SiteFooter() {
   return (
     <footer className="bg-white border-t border-gray-200">
@@ -6,8 +8,14 @@ export default function SiteFooter() {
           {/* Brand section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-                          <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">N</span>
+              <div className="w-8 h-8 rounded-lg overflow-hidden">
+                <Image
+                  src="/neuraldriveLogo.jpeg"
+                  alt="Neural Drive Logo"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-semibold text-xl text-gray-900">Neural Drive</span>
             </div>

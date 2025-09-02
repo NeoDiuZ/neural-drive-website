@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -123,7 +124,7 @@ export default function Navbar() {
           />
           
           <div className="relative z-10 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between">
-            {/* Enhanced Logo with 3D effects */}
+            {/* Enhanced Logo with Neural Drive Image */}
             <Link 
               href="/" 
               className="group flex items-center gap-3 font-bold text-xl tracking-tight text-gray-900 transition-all duration-300" 
@@ -131,13 +132,20 @@ export default function Navbar() {
             >
               <div 
                 ref={logoRef}
-                className="relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform-gpu perspective-1000"
+                className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform-gpu perspective-1000"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <span className="text-white font-black text-base sm:text-lg relative z-10">N</span>
+                <Image
+                  src="/neuraldriveLogo.jpeg"
+                  alt="Neural Drive Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
+                  priority
+                />
                 
                 {/* Animated gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Orbiting particles */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -148,7 +156,7 @@ export default function Navbar() {
                 </div>
                 
                 {/* 3D depth shadow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl transform translate-x-0.5 translate-y-0.5 -z-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/30 to-emerald-600/30 rounded-2xl transform translate-x-0.5 translate-y-0.5 -z-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300" />
               </div>
               <span className="hidden sm:block lg:block group-hover:text-green-600 transition-colors font-semibold text-lg sm:text-xl">
                 Neural Drive
