@@ -96,11 +96,11 @@ export default function DemoSection() {
         <div className="demo-video mb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-0">
             <div className="card-elevated overflow-hidden rounded-xl">
-              <div className="aspect-video bg-gray-100 overflow-hidden relative">
+              <div className="aspect-video bg-gray-100 overflow-hidden relative rounded-xl">
                 <iframe
                   src="https://www.youtube.com/embed/CLR19Y1oNJ4"
                   title="Neural Drive Demo - Breakthrough Communication Technology"
-                  className="absolute inset-0 w-full h-full"
+                  className="absolute inset-0 w-full h-full rounded-t-xl"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   style={{ border: 'none', aspectRatio: '16/9' }}
@@ -108,7 +108,7 @@ export default function DemoSection() {
               </div>
               
               {/* Video info */}
-              <div className="p-6 bg-white">
+              <div className="p-6 bg-white rounded-b-xl">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-4">
                   <a 
                     href="https://youtu.be/CLR19Y1oNJ4?feature=shared" 
