@@ -36,7 +36,6 @@ export default function Demo() {
         <div className="aspect-video w-full bg-slate-100 flex items-center justify-center text-slate-600">
           Video: 2:30 with captions (placeholder)
         </div>
-        <div className="px-4 sm:px-6 py-3 text-xs text-slate-500">Captions available • Autoplay off</div>
       </div>
 
       <div className="mt-10 grid md:grid-cols-2 gap-6">

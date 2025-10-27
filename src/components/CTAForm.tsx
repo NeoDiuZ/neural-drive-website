@@ -196,17 +196,7 @@ export default function CTAForm() {
             </div>
 
             {/* Program Benefits */}
-            <div className="mt-12 grid lg:grid-cols-3 gap-6 text-center">
-              <div className="space-y-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-2xl mx-auto flex items-center justify-center">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="heading-4">24/7 Support</h3>
-                <p className="body-small text-gray-600">Dedicated clinical team available around the clock</p>
-              </div>
-              
+            <div className="mt-12 grid lg:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
               <div className="space-y-3">
                 <div className="w-12 h-12 bg-green-100 rounded-2xl mx-auto flex items-center justify-center">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

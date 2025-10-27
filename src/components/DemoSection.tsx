@@ -95,8 +95,8 @@ export default function DemoSection() {
         {/* Video Section */}
         <div className="demo-video mb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-0">
-            <div className="card-elevated overflow-hidden">
-              <div className="aspect-video bg-gray-100 rounded-t-xl overflow-hidden relative">
+            <div className="card-elevated overflow-hidden rounded-xl">
+              <div className="aspect-video bg-gray-100 overflow-hidden relative">
                 <iframe
                   src="https://www.youtube.com/embed/CLR19Y1oNJ4"
                   title="Neural Drive Demo - Breakthrough Communication Technology"
@@ -109,22 +109,7 @@ export default function DemoSection() {
               
               {/* Video info */}
               <div className="p-6 bg-white">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <div className="flex items-center gap-6 text-sm text-gray-600">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h3.763l7.79 3.894A1 1 0 0018 15V3zM3.5 9.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clipRule="evenodd" />
-                      </svg>
-                      <span>Captions available</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                      </svg>
-                      <span>HD Quality</span>
-                    </div>
-                  </div>
-                  
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-4">
                   <a 
                     href="https://youtu.be/CLR19Y1oNJ4?feature=shared" 
                     target="_blank" 

@@ -35,7 +35,7 @@ const coreTeam = [
   { 
     name: "Kaushik Manian", 
     role: "Chief Tech Officer", 
-    creds: "Hardware Engineering & IoT Systems; Ex-Apple Engineer; 18 National Tech Competitions", 
+    creds: "Hardware Engineering & IoT Systems; 18 National Tech Competitions", 
     img: "/Kaushik.png",
     color: "green"
   },
@@ -119,10 +119,6 @@ export default function TeamGrid() {
         
         {/* Section Header */}
         <div className="team-header text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6">
-            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            <span className="caption text-blue-700">World-Class Expertise</span>
-          </div>
           
           <h2 className="heading-1 mb-6 max-w-[20ch] mx-auto">
             Our team combines neuroscience, AI, and medical expertise
