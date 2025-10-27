@@ -1,9 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
 
 const navItems = [
   { label: "How It Works", href: "#features" },
@@ -18,7 +16,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const navRef = useRef<HTMLElement | null>(null);
-  const logoRef = useRef<HTMLDivElement | null>(null);
   const morphBlobRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -62,32 +59,6 @@ export default function Navbar() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  useEffect(() => {
-    const logoElement = logoRef.current;
-    if (logoElement) {
-      const handleLogoHover = () => {
-        gsap.to(logoElement, {
-          rotationY: 360,
-          duration: 0.8,
-          ease: "power2.out"
-        });
-        
-        // Particle burst effect
-        gsap.to(".logo-particle", {
-          scale: 1.5,
-          opacity: 0,
-          rotation: 360,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power2.out"
-        });
-      };
-      
-      logoElement.addEventListener('mouseenter', handleLogoHover);
-      return () => logoElement.removeEventListener('mouseenter', handleLogoHover);
-    }
-  }, []);
-
   return (
     <>
       {/* Floating Navigation */}
@@ -124,41 +95,13 @@ export default function Navbar() {
           />
           
           <div className="relative z-10 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between">
-            {/* Enhanced Logo with Neural Drive Image */}
+            {/* Neural Drive Text */}
             <Link 
               href="/" 
-              className="group flex items-center gap-3 font-bold text-xl tracking-tight text-gray-900 transition-all duration-300" 
+              className="group flex items-center font-bold text-xl tracking-tight text-gray-900 transition-all duration-300" 
               aria-label="Neural Drive"
             >
-              <div 
-                ref={logoRef}
-                className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform-gpu perspective-1000"
-                style={{ transformStyle: 'preserve-3d' }}
-              >
-                <Image
-                  src="/neuraldriveLogo.png"
-                  alt="Neural Drive Logo"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
-                  priority
-                />
-                
-                {/* Animated gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Orbiting particles */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="logo-particle absolute top-1 left-1 w-1 h-1 bg-white rounded-full" />
-                  <div className="logo-particle absolute top-1 right-1 w-1 h-1 bg-white rounded-full" />
-                  <div className="logo-particle absolute bottom-1 left-1 w-1 h-1 bg-white rounded-full" />
-                  <div className="logo-particle absolute bottom-1 right-1 w-1 h-1 bg-white rounded-full" />
-                </div>
-                
-                {/* 3D depth shadow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-600/30 to-emerald-600/30 rounded-2xl transform translate-x-0.5 translate-y-0.5 -z-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300" />
-              </div>
-              <span className="hidden sm:block lg:block group-hover:text-green-600 transition-colors font-semibold text-lg sm:text-xl">
+              <span className="group-hover:text-green-600 transition-colors font-semibold text-lg sm:text-xl">
                 Neural Drive
               </span>
             </Link>

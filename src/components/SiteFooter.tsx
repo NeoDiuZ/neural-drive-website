@@ -8,24 +8,11 @@ export default function SiteFooter() {
           {/* Brand section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-lg overflow-hidden">
-                <Image
-                  src="/neuraldriveLogo.png"
-                  alt="Neural Drive Logo"
-                  width={32}
-                  height={32}
-                  className="w-full h-full object-cover"
-                />
-              </div>
               <span className="font-semibold text-xl text-gray-900">Neural Drive</span>
             </div>
             <p className="body-small text-gray-600 mb-6 leading-relaxed max-w-[30ch]">
               Singapore&apos;s breakthrough brain-computer interface giving voice to the paralyzed in just 10 seconds.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-50 border border-green-200 rounded-full">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-xs font-medium text-green-700">HSA Class B Pathway</span>
-            </div>
           </div>
 
           {/* Clinical Excellence */}
@@ -34,19 +21,15 @@ export default function SiteFooter() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-small text-gray-600">ISO 13485 Medical Device Compliant</span>
+                <span className="body-small text-gray-600">HSA Class B Regulatory Pathway (2026) Projection</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-small text-gray-600">HSA Class B Regulatory Pathway</span>
+                <span className="body-small text-gray-600">Batey Entrepreneurship Challenge Grand Winners</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-small text-gray-600">Singapore Innovation Award Finalist</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-small text-gray-600">600M+ patients across Singapore and ASEAN</span>
+                <span className="body-small text-gray-600">$25,000 Funding Secured</span>
               </li>
             </ul>
           </div>

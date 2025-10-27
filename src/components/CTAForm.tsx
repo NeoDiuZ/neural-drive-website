@@ -60,11 +60,11 @@ export default function CTAForm() {
               <span className="caption text-green-700">Join the Pilot Program</span>
             </div>
             
-            <h2 className="heading-1 mb-6 max-w-[16ch] mx-auto">
+            <h2 className="cta-title mb-6 max-w-[16ch] mx-auto">
               Be among the first 50 families to experience life-changing communication technology
             </h2>
             
-            <p className="subheading max-w-[60ch] mx-auto text-gray-600">
+            <p className="cta-text max-w-[60ch] mx-auto text-gray-600">
               Our pilot program offers exclusive early access with personalized support from our clinical team.
             </p>
           </div>
@@ -77,12 +77,12 @@ export default function CTAForm() {
               <form action={formAction} className="space-y-8">
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block body font-medium text-gray-700">
+                    <label htmlFor="name" className="block form-label">
                       Full Name *
                     </label>
                     <input 
                       id="name"
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
+                      className="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
                       name="name" 
                       placeholder="Enter your full name" 
                       required 
@@ -90,12 +90,12 @@ export default function CTAForm() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block body font-medium text-gray-700">
+                    <label htmlFor="email" className="block form-label">
                       Email Address *
                     </label>
                     <input 
                       id="email"
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
+                      className="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
                       name="email" 
                       type="email" 
                       placeholder="your.email@example.com" 
@@ -106,12 +106,12 @@ export default function CTAForm() {
                 
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block body font-medium text-gray-700">
+                    <label htmlFor="phone" className="block form-label">
                       Phone Number *
                     </label>
                     <input 
                       id="phone"
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
+                      className="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
                       name="phone" 
                       type="tel" 
                       placeholder="+65 8123 4567" 
@@ -120,12 +120,12 @@ export default function CTAForm() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="role" className="block body font-medium text-gray-700">
+                    <label htmlFor="role" className="block form-label">
                       I am a... *
                     </label>
                     <select 
                       id="role" 
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
+                      className="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-200" 
                       name="role" 
                       required
                     >

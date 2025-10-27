@@ -127,42 +127,83 @@ export default function FeatureHighlights() {
         </div>
 
         {/* Asymmetrical Feature Grid */}
-        <div className="space-y-24">
+        <div className="relative">
           {features.map((feature, index) => (
-            <div 
-              key={feature.title}
-              className={`feature-card grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-row-dense' : ''
-              }`}
-            >
-              {/* Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-2xl">
-                  <span className="heading-4 text-green-600">{index + 1}</span>
+            <div key={feature.title}>
+              <div 
+                className={`feature-card grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
+                  index % 2 === 1 ? 'lg:grid-flow-row-dense' : ''
+                }`}
+              >
+                {/* Content */}
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-2xl">
+                    <span className="heading-4 text-green-600">{index + 1}</span>
+                  </div>
+                  
+                  <h3 className="feature-title">{feature.title}</h3>
+                  
+                  <p className="feature-text max-w-[50ch]">
+                    {feature.desc}
+                  </p>
+                  
+                  <div className="pt-4">
+                    <div className="inline-flex items-center gap-2 text-green-600 font-medium hover:gap-3 transition-all duration-200 cursor-pointer group">
+                      <span>Learn more</span>
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                
-                <h3 className="heading-2">{feature.title}</h3>
-                
-                <p className="body-large text-gray-600 max-w-[50ch]">
-                  {feature.desc}
-                </p>
-                
-                <div className="pt-4">
-                  <div className="inline-flex items-center gap-2 text-green-600 font-medium hover:gap-3 transition-all duration-200 cursor-pointer group">
-                    <span>Learn more</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+
+                {/* Illustration */}
+                <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <div className="card-elevated hover:shadow-xl transition-all duration-300">
+                    {feature.illustration}
                   </div>
                 </div>
               </div>
-
-              {/* Illustration */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                <div className="card-elevated hover:shadow-xl transition-all duration-300">
-                  {feature.illustration}
+              
+              {/* Connecting Line Between Sections */}
+              {index < features.length - 1 && (
+                <div className="relative h-24 overflow-hidden">
+                  <svg 
+                    className="absolute inset-0 w-full h-full" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    {index === 0 ? (
+                      // Line from step 1 to step 2 - flipped horizontally
+                      <>
+                        <path
+                          d="M 18 157 Q 18 81 40 81 Q 63 81 63 0"
+                          fill="none"
+                          stroke="#d1d5db"
+                          strokeWidth="1.5"
+                          strokeDasharray="8, 4"
+                          vectorEffect="non-scaling-stroke"
+                          className="transition-all duration-500"
+                        />
+                      </>
+                    ) : (
+                      // Line from step 2 to step 3
+                      <>
+                        <path
+                          d="M 17 0 Q 18 81 40 81 Q 63 81 63 162"
+                          fill="none"
+                          stroke="#d1d5db"
+                          strokeWidth="1.5"
+                          strokeDasharray="8, 4"
+                          vectorEffect="non-scaling-stroke"
+                          className="transition-all duration-500"
+                        />
+                      </>
+                    )}
+                  </svg>
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
@@ -177,10 +218,10 @@ export default function FeatureHighlights() {
               { value: "100", unit: "%", label: "Success rate" }
             ].map((stat) => (
               <div key={stat.label} className="space-y-2">
-                <div className="heading-1 text-green-600">
+                <div className="stat-value">
                   {stat.value}<span className="text-gray-400">{stat.unit}</span>
                 </div>
-                <div className="body-small text-gray-500">{stat.label}</div>
+                <div className="stat-label">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -189,3 +230,7 @@ export default function FeatureHighlights() {
     </section>
   );
 }
+
+
+
+

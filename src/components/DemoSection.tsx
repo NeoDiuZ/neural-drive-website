@@ -82,10 +82,6 @@ export default function DemoSection() {
         
         {/* Section Header */}
         <div className="demo-header text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full mb-6">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-            <span className="caption text-red-700">Live Demo</span>
-          </div>
           
           <h2 className="heading-1 mb-6 max-w-[16ch] mx-auto">
             See the transformation in real time
@@ -109,12 +105,6 @@ export default function DemoSection() {
                   allowFullScreen
                   style={{ border: 'none' }}
                 />
-                
-                {/* Live indicator */}
-                <div className="absolute top-4 left-4 flex items-center gap-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                  LIVE
-                </div>
               </div>
               
               {/* Video info */}
@@ -163,13 +153,13 @@ export default function DemoSection() {
                   </svg>
                 </div>
                 
-                              <p className="body-large mb-6 italic text-gray-700">
-                &ldquo;{testimonial.text}&rdquo;
-              </p>
+                <p className="testimonial-quote mb-6 text-gray-700">
+                  &ldquo;{testimonial.text}&rdquo;
+                </p>
                 
                 <footer className="space-y-1">
-                  <div className="heading-4 text-sm text-gray-900">{testimonial.author}</div>
-                  <div className="body-small text-gray-500">{testimonial.relation}</div>
+                  <div className="testimonial-author text-gray-900">{testimonial.author}</div>
+                  <div className="testimonial-relation">{testimonial.relation}</div>
                   
                   <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-green-50 border border-green-100 rounded-full">
                     <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
