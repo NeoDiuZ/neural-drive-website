@@ -259,7 +259,7 @@ export default function HeroCluely() {
                 <div className="stat-label">Setup time</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="stat-value">$25K</div>
+                <div className="stat-value">$200K</div>
                 <div className="stat-label">Funding Secured</div>
               </div>
               <div className="text-center lg:text-left">

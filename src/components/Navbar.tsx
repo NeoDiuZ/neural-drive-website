@@ -15,6 +15,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
   const morphBlobRef = useRef<HTMLDivElement | null>(null);
 
@@ -22,6 +23,13 @@ export default function Navbar() {
     const onScroll = () => {
       const scrollY = window.scrollY;
       setScrolled(scrollY > 50);
+      
+      // Gradually reveal navbar as user scrolls down
+      if (scrollY > 20) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
       
       // Detect active section
       const sections = ['features', 'demo', 'team'];
@@ -68,7 +76,9 @@ export default function Navbar() {
           scrolled 
             ? "top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl scale-95" 
             : "top-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-5xl scale-100"
-        } sm:top-6 sm:left-1/2 sm:transform sm:-translate-x-1/2`}
+        } sm:top-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
       >
         {/* Dynamic gradient background following mouse */}
         <div 
