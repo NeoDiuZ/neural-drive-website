@@ -378,7 +378,7 @@ const CommunicationInterface: React.FC = () => {
   const [selectedYtModalIndex, setSelectedYtModalIndex] = useState<number | null>(1);
   const [activeYtModalIndex, setActiveYtModalIndex] = useState<number | null>(null);
   const YT_API_KEY = (process.env.NEXT_PUBLIC_YT_API_KEY as string | undefined);
-  const YT_FIXED_QUERY = 'old people relaxation videos';
+  const YT_FIXED_QUERY = 'Latest Relaxing Nature Videos';
   // Lights BLE
   const LIGHTS_SERVICE_UUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
   const LIGHTS_CHAR_UUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
