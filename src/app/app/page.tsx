@@ -1,6 +1,6 @@
 "use client";
 
-import CommunicationInterface from "../../../whatthehack/src/components/Mainpage";
+import CommunicationInterface from "@/components/Mainpage";
 
 export default function AppPage() {
   return <CommunicationInterface />;
