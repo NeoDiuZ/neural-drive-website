@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Utensils, Users, Droplets, Sun, Moon, WifiOff, HelpCircle, Brain, Plus, X, Globe, Heart, Home, Star, Car, Phone, Music, Coffee, Bed, Sun as SunIcon, Zap, Camera, Gift, Clock, MapPin, Thermometer, Mic, MessageCircle, Play, Bus, Bike, Plane, Key, Building2, Stethoscope, Users2, Briefcase, GraduationCap, Dumbbell, Pill, Frown, Smile, CloudRain, AlertTriangle, Activity, GamepadIcon, Monitor, Lightbulb, Youtube } from 'lucide-react';
+import { Utensils, Users, Droplets, Sun, Moon, WifiOff, HelpCircle, Brain, Plus, X, Globe, Heart, Home, Star, Car, Phone, Music, Coffee, Bed, Sun as SunIcon, Zap, Camera, Gift, Clock, MapPin, Thermometer, Mic, MessageCircle, Play, Bus, Bike, Plane, Key, Building2, Stethoscope, Users2, Briefcase, GraduationCap, Dumbbell, Pill, Frown, Smile, CloudRain, AlertTriangle, Activity, GamepadIcon, Lightbulb, Youtube } from 'lucide-react';
 
 interface Option {
   id: string;
@@ -30,7 +30,6 @@ interface Translations {
     food: string;
     help: string;
     outing: string;
-    television: string;
     washroom: string;
     water: string;
     lights: string;
@@ -64,7 +63,6 @@ interface Translations {
     food: string;
     help: string;
     outing: string;
-    television: string;
     washroom: string;
     water: string;
     lights: string;
@@ -98,7 +96,6 @@ interface Translations {
     food: string;
     help: string;
     outing: string;
-    television: string;
     washroom: string;
     water: string;
     lights: string;
@@ -132,7 +129,6 @@ interface Translations {
     food: string;
     help: string;
     outing: string;
-    television: string;
     washroom: string;
     water: string;
     lights: string;
@@ -170,7 +166,6 @@ const translations: Translations = {
     food: "Food",
     help: "Help",
     outing: "Outing",
-    television: "Television",
     washroom: "Washroom",
     water: "Water",
     lights: "Lights",
@@ -204,7 +199,6 @@ const translations: Translations = {
     food: "Makanan",
     help: "Bantuan",
     outing: "Keluar",
-    television: "Televisyen",
     washroom: "Bilik Air",
     water: "Air",
     lights: "Lampu",
@@ -238,7 +232,6 @@ const translations: Translations = {
     food: "உணவு",
     help: "உதவி",
     outing: "வெளியே செல்",
-    television: "தொலைக்காட்சி",
     washroom: "கழிப்பறை",
     water: "தண்ணீர்",
     lights: "விளக்குகள்",
@@ -272,7 +265,6 @@ const translations: Translations = {
     food: "食物",
     help: "帮助",
     outing: "外出",
-    television: "电视",
     washroom: "洗手间",
     water: "水",
     lights: "灯光",
@@ -436,12 +428,12 @@ const CommunicationInterface: React.FC = () => {
       soundFile: 'outing.mp3'
     },
     {
-      id: 'television',
-      label: t.television,
-      icon: <Monitor size={40} strokeWidth={1.5} />,
-      color: 'bg-indigo-500',
-      lightColor: 'bg-indigo-400',
-      soundFile: 'television.mp3'
+      id: 'water',
+      label: t.water,
+      icon: <Droplets size={40} strokeWidth={1.5} />,
+      color: 'bg-cyan-600',
+      lightColor: 'bg-cyan-500',
+      soundFile: 'water.mp3'
     },
     {
       id: 'lights',
@@ -528,7 +520,7 @@ const CommunicationInterface: React.FC = () => {
     { name: 'Music', icon: <Music size={40} strokeWidth={1.5} /> },
     { name: 'Game', icon: <GamepadIcon size={40} strokeWidth={1.5} /> },
     { name: 'Play', icon: <Play size={40} strokeWidth={1.5} /> },
-    { name: 'Television', icon: <Monitor size={40} strokeWidth={1.5} /> },
+    { name: 'Water', icon: <Droplets size={40} strokeWidth={1.5} /> },
     
     // Objects & Tools
     { name: 'Clock', icon: <Clock size={40} strokeWidth={1.5} /> },
