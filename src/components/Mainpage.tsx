@@ -358,6 +358,7 @@ const CommunicationInterface: React.FC = () => {
   const [pendingActionOptionId, setPendingActionOptionId] = useState<string | null>(null);
   const handleNotificationsRef = useRef<((event: Event) => void) | undefined>(undefined);
   const notificationWrapperRef = useRef<((event: Event) => void) | undefined>(undefined);
+  const optionsRef = useRef<Option[]>([]);
   // YouTube state
   const [showYouTubeView, setShowYouTubeView] = useState(false);
   const [ytVideos, setYtVideos] = useState<Array<{ id: string; title: string; thumb: string }>>([]);
@@ -471,6 +472,8 @@ const CommunicationInterface: React.FC = () => {
   // Debug: Track options changes
   useEffect(() => {
     console.log('📋 Options array changed:', options.map(o => `${o.id}:${o.label}`));
+    // Update ref to always have latest options
+    optionsRef.current = options;
   }, [options]);
 
   // Debug: Track menu state changes
@@ -653,7 +656,9 @@ const CommunicationInterface: React.FC = () => {
     }
 
     // Main menu handler (only when no overlays are open)
-    console.log(`🏠 MAIN MENU: Processing packet, options.length=${options.length}`);
+    // Use ref to get latest options array (avoids stale closure)
+    const currentOptions = optionsRef.current;
+    console.log(`🏠 MAIN MENU: Processing packet, options.length=${currentOptions.length}`);
     if (data.length === 1) {
       if (data[0] === 0) {
         console.log(`🏠 MAIN MENU: Menu start (0)`);
@@ -671,9 +676,9 @@ const CommunicationInterface: React.FC = () => {
     if (data.length === 2) {
       if (data[0] === 'S'.charCodeAt(0)) {
         const newIndex = data[1];
-        console.log(`🏠 MAIN MENU: 'S' received, index=${newIndex}, options.length=${options.length}`);
-        if (newIndex > 0 && newIndex <= options.length) {
-          console.log(`🏠 MAIN MENU: Valid index, highlighting card: ${options[newIndex - 1]?.label || 'unknown'}`);
+        console.log(`🏠 MAIN MENU: 'S' received, index=${newIndex}, options.length=${currentOptions.length}`);
+        if (newIndex > 0 && newIndex <= currentOptions.length) {
+          console.log(`🏠 MAIN MENU: Valid index, highlighting card: ${currentOptions[newIndex - 1]?.label || 'unknown'}`);
           setMenuActive(true);
           setCurrentMenuIndex(newIndex);
           setActiveSelection(null);
@@ -681,37 +686,37 @@ const CommunicationInterface: React.FC = () => {
           playSound('select.mp3');
           console.log(`🏠 MAIN MENU: State updated - menuActive=true, currentMenuIndex=${newIndex}`);
         } else {
-          console.log(`🏠 MAIN MENU: Invalid index ${newIndex}, range is 1-${options.length}`);
+          console.log(`🏠 MAIN MENU: Invalid index ${newIndex}, range is 1-${currentOptions.length}`);
         }
         return;
       }
       if (data[0] === 'A'.charCodeAt(0)) {
         const selectedIndex = data[1];
-        console.log(`🏠 MAIN MENU: 'A' received, index=${selectedIndex}, options.length=${options.length}`);
-        if (selectedIndex > 0 && selectedIndex <= options.length) {
-          const optionId = options[selectedIndex - 1].id;
-          console.log(`🏠 MAIN MENU: Activating option: ${optionId} (${options[selectedIndex - 1]?.label})`);
+        console.log(`🏠 MAIN MENU: 'A' received, index=${selectedIndex}, options.length=${currentOptions.length}`);
+        if (selectedIndex > 0 && selectedIndex <= currentOptions.length) {
+          const optionId = currentOptions[selectedIndex - 1].id;
+          console.log(`🏠 MAIN MENU: Activating option: ${optionId} (${currentOptions[selectedIndex - 1]?.label})`);
           setSelectedOption(optionId);
           setActiveSelection(optionId);
-          playSound(options[selectedIndex - 1].soundFile);
+          playSound(currentOptions[selectedIndex - 1].soundFile);
           setPendingActionOptionId(optionId);
           setTimeout(() => {
             setActiveSelection(null);
           }, 3000);
         } else {
-          console.log(`🏠 MAIN MENU: Index ${selectedIndex} out of range (1-${options.length})`);
+          console.log(`🏠 MAIN MENU: Index ${selectedIndex} out of range (1-${currentOptions.length})`);
         }
         return;
       }
     }
     console.log(`🏠 MAIN MENU: Unhandled packet`);
-  }, [options, playSound, showYouTubeView, ytVideos, selectedYtModalIndex, ytModal.open]); // Add all state dependencies
+  }, [playSound, showYouTubeView, ytVideos, selectedYtModalIndex, ytModal.open]); // Removed options from deps since we use ref
 
   // Update the ref whenever the callback changes
   useEffect(() => {
     handleNotificationsRef.current = handleNotifications;
-    console.log('🔄 handleNotifications callback updated, options.length:', options.length);
-  }, [handleNotifications, options.length]);
+    console.log('🔄 handleNotifications callback updated, options.length:', optionsRef.current.length);
+  }, [handleNotifications]);
 
   useEffect(() => {
     // DISABLED: All menu highlighting is now handled directly in the BLE handler
