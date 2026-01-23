@@ -205,7 +205,7 @@ export default function TeamGrid() {
                   <div className="body-small text-green-600 font-medium mb-3">{coreTeam[2].role}</div>
                 </div>
                 
-                <p className="body-small text-gray-600 text-left leading-relaxed">{coreTeam[2].creds}</p>
+                <p className="body-small text-gray-600 text-center leading-relaxed">{coreTeam[2].creds}</p>
               </div>
             </div>
           </div>
