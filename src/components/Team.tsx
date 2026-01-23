@@ -5,11 +5,6 @@ export default function Team() {
       role: "CEO",
       credentials: "35 National Awards, HealthTech Exit",
     },
-    {
-      name: "Dr. Dehan Hong",
-      role: "Medical Advisor",
-      credentials: "Ex-CMO SCDF, 20+ Years Experience",
-    },
   ];
 
   return (
