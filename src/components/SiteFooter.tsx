@@ -29,7 +29,7 @@ export default function SiteFooter() {
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-small text-gray-600">$25,000 Funding Secured</span>
+                <span className="body-small text-gray-600">$200,000 Funding Secured</span>
               </li>
             </ul>
           </div>
