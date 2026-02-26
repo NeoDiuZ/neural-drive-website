@@ -41,17 +41,6 @@ const coreTeam = [
   },
 ];
 
-const advisors = [
-  { 
-    name: "Ng ToonLee", 
-    role: "Commercialisation Advisor", 
-    creds: "Angel Investor; Former Global BioTech/Agri Corporate Leader; Prestige Women of Power 2025", 
-    img: "/Ng_Toon_Lee.png",
-    color: "green"
-  },
-];
-
-
 export default function TeamGrid() {
   const sectionRef = useRef<HTMLElement | null>(null);
 
@@ -178,41 +167,11 @@ export default function TeamGrid() {
           </div>
         </div>
 
-        {/* Advisors */}
-        <div className="mb-16">
-          <div className="flex justify-center flex-wrap gap-8">
-            {advisors.map((member) => (
-              <div key={member.name} className="team-card max-w-md w-full">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg hover:border-gray-300 transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="relative w-20 h-20 mx-auto rounded-2xl overflow-hidden border-2 border-gray-200 shadow-sm">
-                      <Image 
-                        src={member.img} 
-                        alt={`${member.name} — ${member.role}`} 
-                        width={80} 
-                        height={80} 
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <h3 className="heading-4 mb-1 text-gray-900">{member.name}</h3>
-                    <div className="body-small text-green-600 font-medium mb-3">{member.role}</div>
-                  </div>
-                  
-                  <p className="body-small text-gray-600 text-center leading-relaxed">{member.creds}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Team Stats */}
         <div className="team-stats pt-16 border-t border-gray-100">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { value: "5", label: "Expert Team Members" },
+              { value: "4", label: "Expert Team Members" },
               { value: "100+", label: "Combined Tech Competitions" },
               { value: "1", label: "Successful HealthTech Exits" },
               { value: "15+", label: "Years Combined Experience" }
