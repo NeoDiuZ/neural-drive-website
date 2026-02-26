@@ -46,13 +46,6 @@ const coreTeam = [
     img: "/Nyan.jpg",
     color: "green"
   },
-  { 
-    name: "Ng ToonLee", 
-    role: "Commercialisation Advisor", 
-    creds: "Angel Investor; Former Global BioTech/Agri Corporate Leader; Prestige Women of Power 2025", 
-    img: "/Ng_Toon_Lee.png",
-    color: "green"
-  },
 ];
 
 
