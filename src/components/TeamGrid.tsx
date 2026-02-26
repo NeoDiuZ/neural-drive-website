@@ -16,13 +16,6 @@ const leadership = [
     color: "green"
   },
   { 
-    name: "Angela Ng", 
-    role: "Chief Science Officer", 
-    creds: "Doctoral Candidate in Neuroscience & Social Brain Science (ETH Zürich, Neuroscience Centre Zürich); A*STAR Collaborator; Ex-SNU Researcher", 
-    img: "/Angela_Ng.png",
-    color: "green"
-  },
-  { 
     name: "Raymond Loong Ng", 
     role: "Chief AI Officer", 
     creds: "Director of Singapore Youth AI; Successful HealthTech Exit; 27 National & Regional Tech Competitions", 
